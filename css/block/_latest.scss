@@ -1,0 +1,160 @@
+@mixin my-class {
+    width: 469px;
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    margin-bottom: 22px;
+
+}
+
+.latest {
+    margin-bottom: 141px;
+
+    &_container {
+        padding: 0px;
+
+    }
+
+    &_header {
+        font-family: DM Serif Display;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 62.5px;
+        letter-spacing: 0.02em;
+        margin-bottom: 34px;
+    }
+
+    &_all {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_left {}
+
+    &_right {
+        width: 469px;
+    }
+
+    &_right--width {}
+
+    &_right--header {
+        width: 463px;
+        font-family: DM Serif Display;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 31.25px;
+        letter-spacing: 0.02em;
+        margin-bottom: 22px;
+    }
+
+
+    &_right--text {
+        width: 469px;
+        font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: 0.01em;
+        margin-bottom: 22px;
+    }
+
+    &_right--lorem {
+
+        @include my-class;
+
+    }
+
+    &_right--list {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &_right--december {
+        @include my-class;
+
+    }
+
+    &_right--button {
+        width: 52px;
+        height: 52px;
+        gap: 0px;
+        opacity: 0px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+    }
+    @media screen and (max-width:1116px) {
+       &_right--header{
+        width: 347px;
+        font-size: 22px;
+        text-align: center;
+       }
+
+       &_right--lorem {
+        width: 347px;
+        font-size: 20px;
+        text-align: center;
+       }
+       &_right--text{
+        width: 347px;
+        font-size: 20px;
+        text-align: center;
+       }
+
+       &_img{
+        width: 95%;
+        height: 85%;
+       }
+
+       &_right--december{
+        width: 224px;
+       }
+     }
+    @media screen and (max-width:870px) {
+        &_all{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &_right{
+            width: 100%;
+        }
+
+        &_right--width{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &_right--header{
+            width: 100%;
+            text-align: center;
+        }
+
+        &_right--text{
+            width: 100%;
+            text-align: center;
+        }
+
+        &_right--lorem{
+            width: 100%;
+            text-align: center;
+        }
+
+        
+       &_img{
+        width: 100%;
+        
+       }
+
+       &_header{
+        font-size: 40px;
+        text-align: center;
+       }
+     }
+}

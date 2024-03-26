@@ -1,0 +1,82 @@
+.articles {
+    margin-bottom: 110px;
+    .container {}
+
+    &_container {
+        padding: 0px;
+    }
+
+    &_header {
+        font-family: DM Serif Display;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 62.5px;
+        letter-spacing: 0.02em;
+        margin-bottom: 83px;
+
+    }
+
+    &_list {
+        @include display-center;
+    }
+
+    &_item {}
+
+    &_img {}
+
+    &_item--header {
+        width: 305px;
+        font-family: DM Serif Display;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 31.25px;
+        letter-spacing: 0.02em;
+        margin-bottom: 30px;
+    }
+
+    &_display {
+        @include display-center;
+
+    }
+
+    &_number {}
+
+    &_button {
+        width: 52px;
+        height: 52px;
+        gap: 0px;
+        opacity: 0px;
+        background: rgba(244, 240, 236, 1);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+
+
+    }
+
+    @media screen and (max-width:1080px){
+        &_list{
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+    }
+
+    @media screen and (max-width:680px){
+        &_list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+
+        &_item, &_item--header{
+            width: 100%;
+            text-align: center;
+        }
+
+        &_display{
+            display: inline-flex;
+        }
+    }
+}
